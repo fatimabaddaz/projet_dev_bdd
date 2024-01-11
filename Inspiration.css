@@ -1,0 +1,865 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+  *{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+:root{
+    --white:#fff;
+    --black:#222;
+    --pink:pink;
+    --grey1:#f0f0f0;
+    --grey2:#e9d7d3;
+}
+/* Basic Reset */
+html{
+    font-size: 62.5%;
+
+}
+body{
+    font-family:'Poppins', sans-serif ;
+    font-size: 1.6rem;
+    background-color: var(--white);
+    color:var(--black);
+    font-weight: 400;
+    font-style: normal;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+li{
+    list-style-type: none;
+
+}
+.container{
+    max-width: 100rem;
+    margin: 0 auto;
+    padding: 0 3rem;
+
+}
+.d-flex{
+    display: flex;
+    align-items: center;
+
+}
+/*header*/
+.header{
+    position: relative;
+    min-height: 200px;
+   overflow-x: hidden;
+
+}
+.top-nav{
+    background-color: #555;
+    font-size: 1.3rem;
+    color: var(--white);
+
+}
+.top-nav div{
+    justify-content: space-between;
+    height: 4.5rem;
+
+}
+.top-nav a{
+    padding: 0 0.5rem;
+    color: var(--white);
+}
+/*Navigation*/
+.navigation{
+    height: 6rem;
+    line-height: 6rem;
+
+}
+.nav-center{
+    justify-content: space-between;
+
+}    
+/*.nav-list .icons {}*/
+.nav-center .nav-item:not(:last-child){
+    margin-right: 0.5rem;
+
+
+}
+.nav-center .nav-link{
+    font-size: 1.8rem;
+   padding: 1rem;
+}
+.nav-center .nav-link:hover{
+    color: violet;
+}
+/* icons*/
+.icon{
+    cursor: pointer;
+    font-size: 2.5rem;
+    padding: 0 1rem;
+    color: #555;
+    position: relative;
+}
+.icon:not(:last-child){
+    margin-right: 0.5rem;
+
+}
+.icon span{
+    position: absolute;
+    top: 3px;
+    right: -3px;
+    background-color:violet;
+    color: white;
+    border-radius: 50%;
+    font-size: 1.3rem;
+    height: 2rem;
+    width: 2rem;
+    justify-content: center;
+
+}
+.nav-list .icons{
+    display: none;
+
+}
+.nav-center .humburger{
+    display: none;
+    font-size: 2.3rem;
+    color: var(--black);
+    cursor: pointer;
+
+}
+
+.hero,
+.hero .glide__slides{
+    background-color: var(--grey2);
+    position: relative;
+    height: calc(100vh - 6rem);
+    margin :0 4rem;
+    overflow: hidden;
+
+}
+.hero .center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100%;
+    padding-top: 3rem;
+
+}
+.hero .left{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all 1000ms ease-in-out;
+
+
+}
+.hero .left h1{
+    font-size: 5rem;
+    margin: 1rem 0;
+}
+.hero .left p{
+    font-size: 1.6rem;
+    margin: 0rem 0 1rem;
+}
+.hero .left .hero-btn{
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 1.6rem;
+    margin-top: 1rem;
+    background-color: var(--grey2);
+    color: var(--white);
+}
+.hero .right{
+    flex: 0 0 50%;
+    height: 100%;
+    position: relative;
+    text-align: center;
+
+}
+.hero .right img{
+    position: absolute;
+    width: 55rem;
+    opacity: 0;
+    transition: all 1000ms ease-in-out;
+
+}
+.hero .right img.img1{
+    width: 85%;
+    right: -25%;
+    bottom: -50%;
+
+}
+.hero .right img.img2{
+    width: 90%;
+    right: -40%;
+    bottom: -40%;
+    
+}
+.glide__slide--active .center .right img{
+    bottom: -3%;
+    opacity: 1;
+}
+.glide__slide--active .center .left {
+    opacity: 1;
+    top: 35%;
+
+}
+/*categories style*/
+.section{
+    
+   padding: 1px 0 5rem 0;
+    overflow: hidden;
+}
+.cat-center{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   max-width: 114rem;
+   margin: auto;
+   padding: 0 3rem;
+}
+.cat-center .cat{
+    max-width: 35rem;
+    height: 25rem;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+   text-align: center;
+
+}
+.cat-center .cat:not(:last-child){
+    margin-right: 3rem;
+}
+.cat-center .cat img{
+    width: 36.5rem;
+    height: 100%;
+    margin: auto;
+    object-fit: cover;
+    transition: all 2s ease;
+}
+.cat-center .cat:hover img{
+    transform: scale(1.1);
+}
+.cat-center .cat div{
+   position: absolute;
+   bottom: 15%;
+   left: 50%;
+   transform: translateX(-50%);
+   background-color: var(--white);
+   width: 18rem;
+   height: 5rem;
+   line-height: 5rem;
+   text-align: center;
+   font-size: 2rem;
+   font-weight: 500;
+} 
+.title{
+    text-align: center;
+    margin-bottom: 5rem;
+}
+.title h1{
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    color: violet;
+}
+.product-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+.product-item{
+    position: relative;
+    width: 27rem;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+
+}
+.product-thumb img {
+    width: 100%;
+    height: 31rem;
+    object-fit: cover;
+    transition: all 500ms linear;
+    border-radius: 50px;
+    border: 6px solid violet; 
+}
+.product-info{
+    padding: 1rem;
+    text-align: center;
+
+}
+.product-info span{
+    display: inline-block;
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+.product-info a{
+    display: inline-block;
+    font-size: 1.2rem;
+    transition: all 300ms linear;
+    margin-bottom: 1rem;
+}
+.product-info a:hover{
+    color: var(--pink);
+}
+.product-item .icons{
+    position:absolute;
+    left: 50%;
+    top:35%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+}
+.product-item .icons li{
+    background-color: var(--white);
+    text-align: center;
+    padding: 1rem 1.5rem;
+    font-size: 2.3rem;
+   cursor: pointer;
+   transition: 300ms ease-in-out;
+   transform: translateY(20px);
+   visibility: hidden;
+   opacity: 0;
+
+}
+.product-item .icons li:first-child{
+    transition-delay: 0.1s;   
+}
+.product-item .icons li:first-child(2){
+    transition-delay: 0.2s;   
+}
+.product-item .icons li:first-child(3){
+    transition-delay: 0.3s;   
+}
+.product-item:hover .icons li{
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.product-item .icons li:not(:last-child){
+    margin-right: 0.5rem;
+}
+.product-item .icons li:hover{
+    background-color: var(--pink);
+    color: white;
+}
+.product-item .overlay{
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: -1;
+    width: 100%;
+}
+.product-item .overlay::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #222;
+    visibility: hidden;
+    opacity: 0;
+    transition: 300ms ease;
+}
+.product-item:hover .overlay::after{
+    visibility: visible;
+    opacity: -1;
+}
+.product-item:hover .product-thumb img{
+    transform: scale(1.1);
+}
+.product-item .discount {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background-color: var(--pink);
+    padding: 0.5rem 1rem;
+    color: var(--white);
+    border-radius: 2rem;
+    font-size: 1.5rem;
+  }
+/*banner*/
+.banner{
+    position: relative;
+    background-color: #555;
+    padding: 14rem;
+    
+}
+.banner .right img{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50rem;
+}
+.banner .trend .banner p{
+    display: block;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;  
+}
+.banner h1{
+    font-size: 5.4rem;
+    color: var(--black);
+    margin-bottom: 1.5rem;
+}
+.banner .btn{
+    display: inline-block;
+    margin-top: 2rem;
+}
+.contact{
+    background: var(--black);
+    color: white;
+    padding: 10rem 20rem;
+}
+.contact .row{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+.contact .row .col h2{
+    margin-bottom: 1.5rem;
+}
+.contact .row .col p{
+    margin-bottom:2rem;
+   width: 70%;
+   font-size: 1.3rem;
+}
+.btn-1{
+    background-color: violet;
+    color: white;
+    display: inline-block;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+}
+.contact form div{
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+}
+.contact form input{
+    font-family: 'Poppins',sans-serif;
+    text-indent: 2rem;
+    width: 100%;
+    border-radius: 1rem;
+    padding: 1.5rem 0;
+    outline: none;
+    border: none;
+}
+.contact form  a{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color:violet ;
+    color: white;
+    margin: 0.5rem;
+    padding: 1rem 3rem;
+    border-radius: 1rem;
+}
+/*footer*/
+.footer{
+    padding: 7rem 1rem;
+    background-color: violet;
+
+}
+.footer .row{
+    display: grid;
+   grid-template-columns: repeat(3,1fr);
+   max-width: 99.6rem;
+   margin: 0 auto;
+}
+.footer .col{
+    flex-direction: column;
+    color: white;
+    align-items: flex-start;
+}
+.footer .col:last-child{
+    flex-direction: row;
+    justify-content: center;
+}
+.footer .col:last-child span{
+    font-size: 2.5rem;
+    margin-right: 0.5rem;
+   color: white
+}
+.footer .col a{
+    color: white;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+}
+.footer .col h4{
+    margin-bottom: 1rem;
+}
+/*Cart*/
+.cart{
+    margin: 10rem auto;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.cart-info{
+    display: flex;
+    flex-wrap: nowrap;
+}
+th{
+    text-align: left;
+    padding: 0.5rem;
+    color: #fff;
+    background-color: violet;
+    font-weight:normal ;
+}
+td{
+    padding: 1rem 0.5rem;
+}
+td input{
+    width: 5rem;
+    height: 3rem;
+    padding:0.5rem ;   
+}
+td a{
+    color: #222;
+    font-size: 1.4rem;
+}
+td img{
+    width: 8rem;
+    height: 8rem;
+    margin-right: 1rem;
+
+}
+.total-price{
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+.total-price table{
+    border-top: 3px solid violet;
+    width: 100%;
+    max-width: 35rem;
+
+}
+td:last-child{
+    text-align: right;
+
+}
+.checkout-btn{
+    display: inline-block;
+    background-color: violet;
+    color: white;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+/*login*/
+.login-form{
+   padding: 5rem 1rem;
+   max-width: 50rem;
+   margin: 5rem auto;
+   background: linear-gradient(violet, pink);
+   border-radius: 10%;
+}
+.login-form form{
+    display: flex;
+    flex-direction: column;
+}
+.login-form form h1{
+    margin-bottom: 1rem;
+    color: black;
+}
+
+.login-form form p{
+    margin-bottom: 2rem;
+    
+}
+.login-form form label{
+    margin-bottom: 1rem;
+}
+.login-form form input{
+    border: 1px solid #ccc;
+    outline: none;
+    padding: 1.5rem 0;
+    text-indent: 1rem;
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    border-radius: 0.5rem;
+}
+.login-form form input::placeholder{
+    font-size: 1.6rem;
+    color: #222;
+}
+.login-form form .buttons{
+    margin-top: 1rem;
+
+}
+.login-form form button{
+    outline: none;
+    border: none;
+    font-size: 1.6rem;
+    padding:1rem 3rem ;
+    margin-right: 1.6rem;
+    background-color: violet;
+    color: white;
+    cursor: pointer;
+}
+.login-form form p a{
+    color:black;
+}
+/*alll products*/
+ .section .top{
+   display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+
+}
+    .all-products .top select{ 
+        font-family: 'Popins',sans-serif;
+        width: 20rem;
+        border: 1px solid #ccc;
+        padding: 1rem;
+        appearance: none;
+        outline: none;
+    }
+.all-products form{
+    position: relative;
+    z-index: 1;
+}
+.all-products form span{
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    z-index: 0;
+}
+/*pagination*/
+.pagination {
+    display: flex;
+    align-items: center;
+    padding: 3rem 0 5rem 0;
+}
+.pagination span{
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    border: 1px solid violet;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+.pagination span:hover{
+    border: 1px solid violet;
+    background-color: #e9d7d3;
+    color: white;
+}
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
